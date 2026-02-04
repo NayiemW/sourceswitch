@@ -1,3 +1,2 @@
-ignoredBuiltDependencies:
-  - esbuild
-  - puppeteer
+packages:
+  - '.'
