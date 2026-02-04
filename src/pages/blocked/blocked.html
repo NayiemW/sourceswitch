@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Blocked - SourceSwitch</title>
+  <link rel="stylesheet" href="blocked.css">
+</head>
+<body>
+  <div class="container">
+    <div class="icon">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+      </svg>
+    </div>
+
+    <h1>Site Blocked</h1>
+
+    <p class="description">
+      This site is blocked by your settings.
+    </p>
+
+    <div class="domain-badge-container">
+      <span id="domain-badge" class="domain-badge"></span>
+    </div>
+
+    <div class="url-box">
+      <span class="label">BLOCKED URL:</span>
+      <code id="blocked-url"></code>
+    </div>
+
+    <div id="alternative-section" class="alternative-section hidden">
+      <p class="alternative-text">Try an alternative instead:</p>
+      <div class="button-group">
+        <button id="primary-btn" class="btn btn-primary"></button>
+        <button id="secondary-btn" class="btn btn-secondary hidden"></button>
+      </div>
+    </div>
+
+    <div class="bypass-section">
+      <p class="bypass-text">Need to access this site temporarily?</p>
+      <div class="button-group">
+        <button id="allow-once-btn" class="btn btn-outline">Allow once</button>
+        <button id="allow-temp-btn" class="btn btn-outline">Allow for 10 minutes</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      <button id="settings-btn" class="btn btn-link">Manage settings</button>
+    </div>
+
+    <p class="footer-note">
+      Blocked by SourceSwitch extension
+    </p>
+  </div>
+
+  <script src="blocked.js"></script>
+</body>
+</html>

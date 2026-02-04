@@ -1,0 +1,33 @@
+{
+  "name": "sourceswitch",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/build.js --watch",
+    "build": "node scripts/build.js",
+    "build:chrome": "node scripts/build.js",
+    "package:chrome": "node scripts/package.js",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:extension": "node scripts/test-extension.js",
+    "clean": "rm -rf dist artifacts"
+  },
+  "devDependencies": {
+    "@types/archiver": "^6.0.0",
+    "@types/chrome": "^0.0.268",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "archiver": "^7.0.0",
+    "esbuild": "^0.20.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.0",
+    "puppeteer": "^24.36.1",
+    "typescript": "^5.4.0",
+    "vitest": "^1.3.0"
+  }
+}

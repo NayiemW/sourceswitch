@@ -1,0 +1,42 @@
+# Planning files (not to be committed)
+.plan.yaml
+plan.yaml
+.claude.md
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+artifacts/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Environment
+.env
+.env.*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Testing
+coverage/
+
+# Safari build artifacts
+safari-wrapper/build/
+safari-wrapper/DerivedData/
+*.xcarchive
+
+# Misc
+*.tgz
+.eslintcache

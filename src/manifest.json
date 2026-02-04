@@ -1,0 +1,60 @@
+{
+  "manifest_version": 3,
+  "name": "SourceSwitch",
+  "version": "0.1.0",
+  "description": "User-controlled domain filtering with alternative redirects",
+  "permissions": [
+    "storage",
+    "scripting",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "host_permissions": [
+    "*://*.binance.com/*",
+    "*://binance.us/*",
+    "*://*.binance.us/*",
+    "*://coinmarketcap.com/*",
+    "*://*.coinmarketcap.com/*",
+    "*://trustwallet.com/*",
+    "*://*.trustwallet.com/*"
+  ],
+  "optional_host_permissions": [
+    "*://*/*"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "action": {
+    "default_popup": "pages/options/options.html",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_base",
+        "enabled": true,
+        "path": "rules/ruleset_base.json"
+      }
+    ]
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "pages/blocked/blocked.html",
+        "pages/blocked/blocked.css",
+        "pages/blocked/blocked.js",
+        "assets/icons/*"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
