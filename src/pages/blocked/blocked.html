@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site Blocked - SourceSwitch</title>
+  <title data-i18n="siteBlocked">Site Blocked</title>
   <link rel="stylesheet" href="blocked.css">
 </head>
 <body>
@@ -15,9 +15,9 @@
       </svg>
     </div>
 
-    <h1>Site Blocked</h1>
+    <h1 data-i18n="siteBlocked">Site Blocked</h1>
 
-    <p class="description">
+    <p class="description" data-i18n="blockedBySettings">
       This site is blocked by your settings.
     </p>
 
@@ -26,12 +26,12 @@
     </div>
 
     <div class="url-box">
-      <span class="label">BLOCKED URL:</span>
+      <span class="label" data-i18n="blockedUrl">Blocked URL:</span>
       <code id="blocked-url"></code>
     </div>
 
     <div id="alternative-section" class="alternative-section hidden">
-      <p class="alternative-text">Try an alternative instead:</p>
+      <p class="alternative-text" data-i18n="tryAlternative">Try an alternative instead:</p>
       <div class="button-group">
         <button id="primary-btn" class="btn btn-primary"></button>
         <button id="secondary-btn" class="btn btn-secondary hidden"></button>
@@ -39,18 +39,18 @@
     </div>
 
     <div class="bypass-section">
-      <p class="bypass-text">Need to access this site temporarily?</p>
+      <p class="bypass-text" data-i18n="needAccess">Need to access this site temporarily?</p>
       <div class="button-group">
-        <button id="allow-once-btn" class="btn btn-outline">Allow once</button>
-        <button id="allow-temp-btn" class="btn btn-outline">Allow for 10 minutes</button>
+        <button id="allow-once-btn" class="btn btn-outline" data-i18n="allowOnce">Allow once</button>
+        <button id="allow-temp-btn" class="btn btn-outline" data-i18n="allowTenMinutes">Allow for 10 minutes</button>
       </div>
     </div>
 
     <div class="footer">
-      <button id="settings-btn" class="btn btn-link">Manage settings</button>
+      <button id="settings-btn" class="btn btn-link" data-i18n="manageSettings">Manage settings</button>
     </div>
 
-    <p class="footer-note">
+    <p class="footer-note" data-i18n="blockedByExtension">
       Blocked by SourceSwitch extension
     </p>
   </div>

@@ -11,6 +11,7 @@ const CUSTOM_API_RULE_ID_START = 2000;
 const DEFAULT_BLOCKED_DOMAINS = [
   'binance.com',
   'binance.us',
+  'binance.tr',
   'coinmarketcap.com',
   'trustwallet.com',
 ];
@@ -191,6 +192,8 @@ async function updateContentScriptRegistration() {
           '*://*.binance.com/*',
           '*://binance.us/*',
           '*://*.binance.us/*',
+          '*://binance.tr/*',
+          '*://*.binance.tr/*',
           '*://coinmarketcap.com/*',
           '*://*.coinmarketcap.com/*',
           '*://trustwallet.com/*',

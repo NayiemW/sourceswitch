@@ -338,3 +338,24 @@ footer p {
 .list-item-remove:hover {
   color: #ff4757;
 }
+
+.select-input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: #e0e0e0;
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+  min-width: 140px;
+}
+
+.select-input:focus {
+  border-color: #4ecdc4;
+}
+
+.select-input option {
+  background: #1a1a2e;
+  color: #e0e0e0;
+}

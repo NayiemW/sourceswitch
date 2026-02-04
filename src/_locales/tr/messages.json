@@ -1,0 +1,242 @@
+{
+  "extensionName": {
+    "message": "SourceSwitch",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "Alternatif yönlendirmelerle kullanıcı kontrollü alan adı filtreleme",
+    "description": "Extension description"
+  },
+  "siteBlocked": {
+    "message": "Site Engellendi",
+    "description": "Title on blocked page"
+  },
+  "blockedBySettings": {
+    "message": "Bu site ayarlarınız tarafından engellendi.",
+    "description": "Message on blocked page"
+  },
+  "blockedUrl": {
+    "message": "Engellenen URL:",
+    "description": "Label for blocked URL"
+  },
+  "tryAlternative": {
+    "message": "Bunun yerine bir alternatif deneyin:",
+    "description": "Alternative suggestion text"
+  },
+  "openOnCoinGecko": {
+    "message": "CoinGecko'da Aç",
+    "description": "Button to open on CoinGecko"
+  },
+  "searchOnCoinGecko": {
+    "message": "CoinGecko'da Ara",
+    "description": "Button to search on CoinGecko"
+  },
+  "needAccess": {
+    "message": "Bu siteye geçici olarak erişmeniz mi gerekiyor?",
+    "description": "Bypass prompt"
+  },
+  "allowOnce": {
+    "message": "Bir kez izin ver",
+    "description": "Allow once button"
+  },
+  "allowTenMinutes": {
+    "message": "10 dakika izin ver",
+    "description": "Allow for 10 minutes button"
+  },
+  "manageSettings": {
+    "message": "Ayarları yönet",
+    "description": "Settings button"
+  },
+  "blockedByExtension": {
+    "message": "SourceSwitch eklentisi tarafından engellendi",
+    "description": "Footer note"
+  },
+  "settingsTitle": {
+    "message": "SourceSwitch Ayarları",
+    "description": "Settings page title"
+  },
+  "subtitle": {
+    "message": "Alternatiflerle alan adı filtreleme",
+    "description": "Settings subtitle"
+  },
+  "presets": {
+    "message": "Ön Ayarlar",
+    "description": "Presets section title"
+  },
+  "options": {
+    "message": "Seçenekler",
+    "description": "Options section title"
+  },
+  "strictMode": {
+    "message": "Katı mod",
+    "description": "Strict mode toggle label"
+  },
+  "strictModeDesc": {
+    "message": "Üçüncü taraf sitelerin kullandığı API uç noktalarını engelle (bazı özellikleri bozabilir)",
+    "description": "Strict mode description"
+  },
+  "globalLinkRewriting": {
+    "message": "Genel bağlantı yeniden yazma",
+    "description": "Link rewriting toggle label"
+  },
+  "globalLinkRewritingDesc": {
+    "message": "Tüm web sitelerinde bağlantıları yeniden yaz (ek izin gerektirir)",
+    "description": "Link rewriting description"
+  },
+  "showNotifications": {
+    "message": "Yeniden yazma bildirimlerini göster",
+    "description": "Notifications toggle label"
+  },
+  "showNotificationsDesc": {
+    "message": "Bağlantılar yeniden yazıldığında bir başlık göster (şeffaflık modu)",
+    "description": "Notifications description"
+  },
+  "language": {
+    "message": "Dil",
+    "description": "Language setting label"
+  },
+  "languageDesc": {
+    "message": "Eklenti görüntüleme dilini geçersiz kıl",
+    "description": "Language setting description"
+  },
+  "systemDefault": {
+    "message": "Sistem varsayılanı",
+    "description": "System default language option"
+  },
+  "english": {
+    "message": "English",
+    "description": "English language option"
+  },
+  "turkish": {
+    "message": "Türkçe",
+    "description": "Turkish language option"
+  },
+  "customBlockedDomains": {
+    "message": "Özel Engellenen Alan Adları",
+    "description": "Custom domains section title"
+  },
+  "customBlockedDomainsDesc": {
+    "message": "Engellenecek alan adları ekleyin (navigasyon engelleme sayfasına yönlendirilecek)",
+    "description": "Custom domains description"
+  },
+  "addDomain": {
+    "message": "Alan Adı Ekle",
+    "description": "Add domain button"
+  },
+  "noCustomDomains": {
+    "message": "Özel alan adı eklenmedi",
+    "description": "Empty state for custom domains"
+  },
+  "customBlockedApis": {
+    "message": "Özel Engellenen API'ler",
+    "description": "Custom APIs section title"
+  },
+  "customBlockedApisDesc": {
+    "message": "Engellenecek API uç noktaları ekleyin (Katı Mod etkinleştirilmesini gerektirir)",
+    "description": "Custom APIs description"
+  },
+  "addApi": {
+    "message": "API Ekle",
+    "description": "Add API button"
+  },
+  "noCustomApis": {
+    "message": "Özel API eklenmedi",
+    "description": "Empty state for custom APIs"
+  },
+  "rewriteExceptions": {
+    "message": "Yeniden Yazma İstisnaları",
+    "description": "Rewrite exceptions section title"
+  },
+  "rewriteExceptionsDesc": {
+    "message": "Bağlantı yeniden yazmanın devre dışı olduğu siteler",
+    "description": "Rewrite exceptions description"
+  },
+  "addException": {
+    "message": "İstisna Ekle",
+    "description": "Add exception button"
+  },
+  "noExceptions": {
+    "message": "İstisna eklenmedi",
+    "description": "Empty state for exceptions"
+  },
+  "allowlist": {
+    "message": "İzin Listesi",
+    "description": "Allowlist section title"
+  },
+  "noSitesBypassed": {
+    "message": "Şu anda atlanan site yok",
+    "description": "Empty state for allowlist"
+  },
+  "expires": {
+    "message": "Sona eriyor",
+    "description": "Expiry label"
+  },
+  "permanent": {
+    "message": "Kalıcı",
+    "description": "Permanent allowlist entry"
+  },
+  "remove": {
+    "message": "Kaldır",
+    "description": "Remove button"
+  },
+  "statistics": {
+    "message": "İstatistikler",
+    "description": "Statistics section title"
+  },
+  "blockedSevenDays": {
+    "message": "Engellenen (7 gün)",
+    "description": "Blocked stat label"
+  },
+  "bypassedSevenDays": {
+    "message": "Atlanan (7 gün)",
+    "description": "Bypassed stat label"
+  },
+  "linksRewrittenSevenDays": {
+    "message": "Yeniden yazılan bağlantılar (7 gün)",
+    "description": "Rewritten stat label"
+  },
+  "data": {
+    "message": "Veri",
+    "description": "Data section title"
+  },
+  "exportData": {
+    "message": "Veriyi dışa aktar",
+    "description": "Export button"
+  },
+  "importData": {
+    "message": "Veriyi içe aktar",
+    "description": "Import button"
+  },
+  "clearHistory": {
+    "message": "Geçmişi temizle",
+    "description": "Clear history button"
+  },
+  "version": {
+    "message": "Sürüm",
+    "description": "Version label"
+  },
+  "invalidDomainFormat": {
+    "message": "Geçersiz alan adı formatı. Şu formatı kullanın: example.com",
+    "description": "Domain validation error"
+  },
+  "invalidApiFormat": {
+    "message": "Geçersiz API uç noktası formatı. Şu formatı kullanın: api.example.com/v1",
+    "description": "API validation error"
+  },
+  "importFailed": {
+    "message": "Veri içe aktarılamadı. Geçersiz format.",
+    "description": "Import error message"
+  },
+  "confirmClearHistory": {
+    "message": "Tüm olay geçmişi silinsin mi?",
+    "description": "Clear history confirmation"
+  },
+  "allowing": {
+    "message": "İzin veriliyor...",
+    "description": "Allowing in progress text"
+  },
+  "urlNotCaptured": {
+    "message": "URL alınamadı",
+    "description": "URL not available message"
+  }
+}

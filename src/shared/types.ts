@@ -43,12 +43,15 @@ export interface CustomApiEntry {
   createdAt: number;
 }
 
+export type LanguageCode = 'system' | 'en' | 'tr';
+
 export interface StorageSchema {
   version: number;
   presets: Record<string, PresetState>;
   strictMode: boolean;
   globalRewriting: boolean;
   showRewriteNotifications: boolean;
+  language: LanguageCode;
   allowlist: AllowlistEntry[];
   customBlockedDomains: CustomBlockEntry[];
   customBlockedApis: CustomApiEntry[];
@@ -70,6 +73,7 @@ export const DEFAULT_STORAGE: StorageSchema = {
   strictMode: false,
   globalRewriting: false,
   showRewriteNotifications: true,
+  language: 'system',
   allowlist: [],
   customBlockedDomains: [],
   customBlockedApis: [],

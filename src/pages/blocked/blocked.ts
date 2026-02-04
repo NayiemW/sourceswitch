@@ -1,5 +1,6 @@
-import { getAlternativeInfo, extractDomain, getBlockedDomainName } from '../../shared/url-tools';
+import { getAlternativeInfo, extractDomain } from '../../shared/url-tools';
 import { addAllowlistEntry, logEvent } from '../../shared/storage';
+import { initI18n, getMessage, applyI18nToPage } from '../../shared/i18n';
 
 const TEN_MINUTES_MS = 10 * 60 * 1000;
 
@@ -34,14 +35,16 @@ async function updateRulesAndNavigate(url: string) {
   window.location.href = url;
 }
 
-function init() {
+async function init() {
+  // Initialize i18n
+  await initI18n();
+  applyI18nToPage();
+
   const blockedUrl = getBlockedUrl();
   const domain = extractDomain(blockedUrl);
-  const siteName = getBlockedDomainName(blockedUrl);
 
   // Update UI elements
   const urlElement = document.getElementById('blocked-url');
-  const siteNameElement = document.getElementById('site-name');
   const domainBadge = document.getElementById('domain-badge');
   const alternativeSection = document.getElementById('alternative-section');
   const primaryBtn = document.getElementById('primary-btn') as HTMLButtonElement;
@@ -55,14 +58,9 @@ function init() {
     if (blockedUrl) {
       urlElement.textContent = blockedUrl;
     } else {
-      urlElement.textContent = 'URL not captured';
+      urlElement.textContent = getMessage('urlNotCaptured');
       urlElement.style.opacity = '0.5';
     }
-  }
-
-  // Show site name
-  if (siteNameElement) {
-    siteNameElement.textContent = siteName !== 'Unknown' ? siteName : domain || 'this site';
   }
 
   // Show domain badge
@@ -77,7 +75,7 @@ function init() {
     alternativeSection.classList.remove('hidden');
 
     if (alternative.primaryButton && alternative.primaryUrl) {
-      primaryBtn.textContent = alternative.primaryButton;
+      primaryBtn.textContent = getMessage('openOnCoinGecko');
       primaryBtn.addEventListener('click', () => {
         window.location.href = alternative.primaryUrl!;
       });
@@ -86,7 +84,7 @@ function init() {
     }
 
     if (alternative.secondaryButton && alternative.secondaryUrl) {
-      secondaryBtn.textContent = alternative.secondaryButton;
+      secondaryBtn.textContent = getMessage('searchOnCoinGecko');
       secondaryBtn.classList.remove('hidden');
       secondaryBtn.addEventListener('click', () => {
         window.location.href = alternative.secondaryUrl!;
@@ -98,12 +96,12 @@ function init() {
   if (!blockedUrl || !domain) {
     allowOnceBtn.disabled = true;
     allowTempBtn.disabled = true;
-    allowOnceBtn.title = 'Cannot bypass - URL not captured';
-    allowTempBtn.title = 'Cannot bypass - URL not captured';
+    allowOnceBtn.title = getMessage('urlNotCaptured');
+    allowTempBtn.title = getMessage('urlNotCaptured');
   } else {
     allowOnceBtn.addEventListener('click', async () => {
       allowOnceBtn.disabled = true;
-      allowOnceBtn.textContent = 'Allowing...';
+      allowOnceBtn.textContent = getMessage('allowing');
 
       await addAllowlistEntry(domain, 5000); // 5 seconds for "once"
       await logEvent({
@@ -116,7 +114,7 @@ function init() {
 
     allowTempBtn.addEventListener('click', async () => {
       allowTempBtn.disabled = true;
-      allowTempBtn.textContent = 'Allowing...';
+      allowTempBtn.textContent = getMessage('allowing');
 
       await addAllowlistEntry(domain, TEN_MINUTES_MS);
       await logEvent({

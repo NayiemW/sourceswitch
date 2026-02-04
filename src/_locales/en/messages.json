@@ -1,0 +1,242 @@
+{
+  "extensionName": {
+    "message": "SourceSwitch",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "User-controlled domain filtering with alternative redirects",
+    "description": "Extension description"
+  },
+  "siteBlocked": {
+    "message": "Site Blocked",
+    "description": "Title on blocked page"
+  },
+  "blockedBySettings": {
+    "message": "This site is blocked by your settings.",
+    "description": "Message on blocked page"
+  },
+  "blockedUrl": {
+    "message": "Blocked URL:",
+    "description": "Label for blocked URL"
+  },
+  "tryAlternative": {
+    "message": "Try an alternative instead:",
+    "description": "Alternative suggestion text"
+  },
+  "openOnCoinGecko": {
+    "message": "Open on CoinGecko",
+    "description": "Button to open on CoinGecko"
+  },
+  "searchOnCoinGecko": {
+    "message": "Search on CoinGecko",
+    "description": "Button to search on CoinGecko"
+  },
+  "needAccess": {
+    "message": "Need to access this site temporarily?",
+    "description": "Bypass prompt"
+  },
+  "allowOnce": {
+    "message": "Allow once",
+    "description": "Allow once button"
+  },
+  "allowTenMinutes": {
+    "message": "Allow for 10 minutes",
+    "description": "Allow for 10 minutes button"
+  },
+  "manageSettings": {
+    "message": "Manage settings",
+    "description": "Settings button"
+  },
+  "blockedByExtension": {
+    "message": "Blocked by SourceSwitch extension",
+    "description": "Footer note"
+  },
+  "settingsTitle": {
+    "message": "SourceSwitch Settings",
+    "description": "Settings page title"
+  },
+  "subtitle": {
+    "message": "Domain filtering with alternatives",
+    "description": "Settings subtitle"
+  },
+  "presets": {
+    "message": "Presets",
+    "description": "Presets section title"
+  },
+  "options": {
+    "message": "Options",
+    "description": "Options section title"
+  },
+  "strictMode": {
+    "message": "Strict mode",
+    "description": "Strict mode toggle label"
+  },
+  "strictModeDesc": {
+    "message": "Block API endpoints used by third-party sites (may break some features)",
+    "description": "Strict mode description"
+  },
+  "globalLinkRewriting": {
+    "message": "Global link rewriting",
+    "description": "Link rewriting toggle label"
+  },
+  "globalLinkRewritingDesc": {
+    "message": "Rewrite links on all websites (requires additional permission)",
+    "description": "Link rewriting description"
+  },
+  "showNotifications": {
+    "message": "Show rewrite notifications",
+    "description": "Notifications toggle label"
+  },
+  "showNotificationsDesc": {
+    "message": "Display a banner when links are rewritten (transparency mode)",
+    "description": "Notifications description"
+  },
+  "language": {
+    "message": "Language",
+    "description": "Language setting label"
+  },
+  "languageDesc": {
+    "message": "Override extension display language",
+    "description": "Language setting description"
+  },
+  "systemDefault": {
+    "message": "System default",
+    "description": "System default language option"
+  },
+  "english": {
+    "message": "English",
+    "description": "English language option"
+  },
+  "turkish": {
+    "message": "Türkçe",
+    "description": "Turkish language option"
+  },
+  "customBlockedDomains": {
+    "message": "Custom Blocked Domains",
+    "description": "Custom domains section title"
+  },
+  "customBlockedDomainsDesc": {
+    "message": "Add domains to block (navigation will be redirected to block page)",
+    "description": "Custom domains description"
+  },
+  "addDomain": {
+    "message": "Add Domain",
+    "description": "Add domain button"
+  },
+  "noCustomDomains": {
+    "message": "No custom domains added",
+    "description": "Empty state for custom domains"
+  },
+  "customBlockedApis": {
+    "message": "Custom Blocked APIs",
+    "description": "Custom APIs section title"
+  },
+  "customBlockedApisDesc": {
+    "message": "Add API endpoints to block (requires Strict Mode enabled)",
+    "description": "Custom APIs description"
+  },
+  "addApi": {
+    "message": "Add API",
+    "description": "Add API button"
+  },
+  "noCustomApis": {
+    "message": "No custom APIs added",
+    "description": "Empty state for custom APIs"
+  },
+  "rewriteExceptions": {
+    "message": "Rewrite Exceptions",
+    "description": "Rewrite exceptions section title"
+  },
+  "rewriteExceptionsDesc": {
+    "message": "Sites where link rewriting is disabled",
+    "description": "Rewrite exceptions description"
+  },
+  "addException": {
+    "message": "Add Exception",
+    "description": "Add exception button"
+  },
+  "noExceptions": {
+    "message": "No exceptions added",
+    "description": "Empty state for exceptions"
+  },
+  "allowlist": {
+    "message": "Allowlist",
+    "description": "Allowlist section title"
+  },
+  "noSitesBypassed": {
+    "message": "No sites currently bypassed",
+    "description": "Empty state for allowlist"
+  },
+  "expires": {
+    "message": "Expires",
+    "description": "Expiry label"
+  },
+  "permanent": {
+    "message": "Permanent",
+    "description": "Permanent allowlist entry"
+  },
+  "remove": {
+    "message": "Remove",
+    "description": "Remove button"
+  },
+  "statistics": {
+    "message": "Statistics",
+    "description": "Statistics section title"
+  },
+  "blockedSevenDays": {
+    "message": "Blocked (7 days)",
+    "description": "Blocked stat label"
+  },
+  "bypassedSevenDays": {
+    "message": "Bypassed (7 days)",
+    "description": "Bypassed stat label"
+  },
+  "linksRewrittenSevenDays": {
+    "message": "Links rewritten (7 days)",
+    "description": "Rewritten stat label"
+  },
+  "data": {
+    "message": "Data",
+    "description": "Data section title"
+  },
+  "exportData": {
+    "message": "Export data",
+    "description": "Export button"
+  },
+  "importData": {
+    "message": "Import data",
+    "description": "Import button"
+  },
+  "clearHistory": {
+    "message": "Clear history",
+    "description": "Clear history button"
+  },
+  "version": {
+    "message": "Version",
+    "description": "Version label"
+  },
+  "invalidDomainFormat": {
+    "message": "Invalid domain format. Use format: example.com",
+    "description": "Domain validation error"
+  },
+  "invalidApiFormat": {
+    "message": "Invalid API endpoint format. Use format: api.example.com/v1",
+    "description": "API validation error"
+  },
+  "importFailed": {
+    "message": "Failed to import data. Invalid format.",
+    "description": "Import error message"
+  },
+  "confirmClearHistory": {
+    "message": "Clear all event history?",
+    "description": "Clear history confirmation"
+  },
+  "allowing": {
+    "message": "Allowing...",
+    "description": "Allowing in progress text"
+  },
+  "urlNotCaptured": {
+    "message": "URL not captured",
+    "description": "URL not available message"
+  }
+}

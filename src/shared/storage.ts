@@ -296,12 +296,17 @@ export async function importData(json: string): Promise<void> {
     }
   }
 
+  // Validate language
+  const validLanguages = ['system', 'en', 'tr'];
+  const sanitizedLanguage = validLanguages.includes(data.language) ? data.language : 'system';
+
   const sanitizedData: StorageSchema = {
     version: data.version,
     presets: sanitizedPresets,
     strictMode: typeof data.strictMode === 'boolean' ? data.strictMode : false,
     globalRewriting: typeof data.globalRewriting === 'boolean' ? data.globalRewriting : false,
     showRewriteNotifications: typeof data.showRewriteNotifications === 'boolean' ? data.showRewriteNotifications : true,
+    language: sanitizedLanguage,
     allowlist: sanitizedAllowlist,
     customBlockedDomains: sanitizedCustomDomains,
     customBlockedApis: sanitizedCustomApis,

@@ -24,10 +24,25 @@ import {
   exportData,
   importData,
 } from '../../shared/storage';
+import { initI18n, getMessage, applyI18nToPage, setLanguage, getLanguage } from '../../shared/i18n';
 
 const SEVEN_DAYS_MS = 7 * 24 * 60 * 60 * 1000;
 
 async function init() {
+  // Initialize i18n first
+  await initI18n();
+  applyI18nToPage();
+
+  // Set up language selector
+  const languageSelect = document.getElementById('language-select') as HTMLSelectElement;
+  if (languageSelect) {
+    languageSelect.value = getLanguage();
+    languageSelect.addEventListener('change', async () => {
+      await setLanguage(languageSelect.value as 'system' | 'en' | 'tr');
+      window.location.reload();
+    });
+  }
+
   await renderPresets();
   await renderOptions();
   await renderCustomDomains();
@@ -117,7 +132,7 @@ async function renderAllowlist() {
   const allowlist = await getAllowlist();
 
   if (allowlist.length === 0) {
-    container.innerHTML = '<p class="empty-state">No sites currently bypassed</p>';
+    container.innerHTML = `<p class="empty-state">${getMessage('noSitesBypassed')}</p>`;
     return;
   }
 
@@ -147,7 +162,7 @@ async function renderAllowlist() {
 
     const removeBtn = document.createElement('button');
     removeBtn.className = 'allowlist-remove';
-    removeBtn.textContent = 'Remove';
+    removeBtn.textContent = getMessage('remove');
     removeBtn.addEventListener('click', async () => {
       await removeAllowlistEntry(entry.domain);
       await chrome.runtime.sendMessage({ type: 'RULES_UPDATED' });
@@ -184,7 +199,7 @@ async function renderCustomDomains() {
   const domains = await getCustomBlockedDomains();
 
   if (domains.length === 0) {
-    container.innerHTML = '<p class="empty-state">No custom domains added</p>';
+    container.innerHTML = `<p class="empty-state">${getMessage('noCustomDomains')}</p>`;
     return;
   }
 
@@ -200,7 +215,7 @@ async function renderCustomDomains() {
 
     const removeBtn = document.createElement('button');
     removeBtn.className = 'list-item-remove';
-    removeBtn.textContent = 'Remove';
+    removeBtn.textContent = getMessage('remove');
     removeBtn.addEventListener('click', async () => {
       await removeCustomBlockedDomain(entry.domain);
       await chrome.runtime.sendMessage({ type: 'RULES_UPDATED' });
@@ -220,7 +235,7 @@ async function renderCustomApis() {
   const apis = await getCustomBlockedApis();
 
   if (apis.length === 0) {
-    container.innerHTML = '<p class="empty-state">No custom APIs added</p>';
+    container.innerHTML = `<p class="empty-state">${getMessage('noCustomApis')}</p>`;
     return;
   }
 
@@ -236,7 +251,7 @@ async function renderCustomApis() {
 
     const removeBtn = document.createElement('button');
     removeBtn.className = 'list-item-remove';
-    removeBtn.textContent = 'Remove';
+    removeBtn.textContent = getMessage('remove');
     removeBtn.addEventListener('click', async () => {
       await removeCustomBlockedApi(entry.endpoint);
       await chrome.runtime.sendMessage({ type: 'RULES_UPDATED' });
@@ -261,7 +276,7 @@ function setupCustomDomainsListeners() {
 
     // Basic validation
     if (!/^[a-zA-Z0-9][a-zA-Z0-9.-]*[a-zA-Z0-9]$/.test(domain)) {
-      alert('Invalid domain format. Use format: example.com');
+      alert(getMessage('invalidDomainFormat'));
       return;
     }
 
@@ -289,7 +304,7 @@ function setupCustomApisListeners() {
 
     // Basic validation - allow domains and paths
     if (!/^[a-zA-Z0-9][a-zA-Z0-9./-]*[a-zA-Z0-9]$/.test(endpoint)) {
-      alert('Invalid API endpoint format. Use format: api.example.com/v1');
+      alert(getMessage('invalidApiFormat'));
       return;
     }
 
@@ -312,7 +327,7 @@ async function renderRewriteExceptions() {
   const exceptions = await getRewriteExceptions();
 
   if (exceptions.length === 0) {
-    container.innerHTML = '<p class="empty-state">No exceptions added</p>';
+    container.innerHTML = `<p class="empty-state">${getMessage('noExceptions')}</p>`;
     return;
   }
 
@@ -328,7 +343,7 @@ async function renderRewriteExceptions() {
 
     const removeBtn = document.createElement('button');
     removeBtn.className = 'list-item-remove';
-    removeBtn.textContent = 'Remove';
+    removeBtn.textContent = getMessage('remove');
     removeBtn.addEventListener('click', async () => {
       await removeRewriteException(domain);
       await renderRewriteExceptions();
@@ -351,7 +366,7 @@ function setupRewriteExceptionsListeners() {
     if (!domain) return;
 
     if (!/^[a-zA-Z0-9][a-zA-Z0-9.-]*[a-zA-Z0-9]$/.test(domain)) {
-      alert('Invalid domain format. Use format: twitter.com');
+      alert(getMessage('invalidDomainFormat'));
       return;
     }
 
@@ -395,13 +410,13 @@ function setupEventListeners() {
       const text = await file.text();
       await importData(text);
       window.location.reload();
-    } catch (err) {
-      alert('Failed to import data. Invalid format.');
+    } catch {
+      alert(getMessage('importFailed'));
     }
   });
 
   clearBtn?.addEventListener('click', async () => {
-    if (confirm('Clear all event history?')) {
+    if (confirm(getMessage('confirmClearHistory'))) {
       await clearEvents();
       await renderStats();
     }

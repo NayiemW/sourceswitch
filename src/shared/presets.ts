@@ -10,6 +10,8 @@ export const PRESETS: Record<string, Preset> = {
       { pattern: '*.binance.com', action: 'block_main_frame' },
       { pattern: 'binance.us', action: 'block_main_frame' },
       { pattern: '*.binance.us', action: 'block_main_frame' },
+      { pattern: 'binance.tr', action: 'block_main_frame' },
+      { pattern: '*.binance.tr', action: 'block_main_frame' },
       { pattern: 'coinmarketcap.com', action: 'block_main_frame' },
       { pattern: '*.coinmarketcap.com', action: 'block_main_frame' },
       { pattern: 'trustwallet.com', action: 'block_main_frame' },
