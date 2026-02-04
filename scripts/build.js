@@ -52,6 +52,9 @@ async function build() {
 
     cpSync(join(rootDir, 'assets'), join(distDir, 'assets'), { recursive: true });
 
+    // Copy locales for i18n
+    cpSync(join(srcDir, '_locales'), join(distDir, '_locales'), { recursive: true });
+
     copyFileSync(join(srcDir, 'pages', 'blocked', 'blocked.html'), join(distDir, 'pages', 'blocked', 'blocked.html'));
     copyFileSync(join(srcDir, 'pages', 'blocked', 'blocked.css'), join(distDir, 'pages', 'blocked', 'blocked.css'));
     copyFileSync(join(srcDir, 'pages', 'options', 'options.html'), join(distDir, 'pages', 'options', 'options.html'));
