@@ -32,39 +32,33 @@ Backup and restore your configuration.
 
 ## Installation
 
+### Quick Install (Recommended)
+
+1. **Download** the latest release:
+   [**Download SourceSwitch v0.1.0**](https://github.com/NayiemW/sourceswitch/releases/latest/download/chrome-webstore.zip)
+
+2. **Extract** the zip file to a folder
+
+3. **Open Chrome** and go to `chrome://extensions/`
+
+4. **Enable Developer mode** (toggle in top right corner)
+
+5. **Click "Load unpacked"** and select the extracted folder
+
+Done! The extension icon will appear in your toolbar.
+
 ### From Source
 
-Clone the repository:
+Clone and build:
 
 ```bash
 git clone https://github.com/NayiemW/sourceswitch.git
 cd sourceswitch
-```
-
-Install dependencies:
-
-```bash
 pnpm install
-```
-
-Build the extension:
-
-```bash
 pnpm build:chrome
 ```
 
-Load in Chrome:
-
-1. Go to `chrome://extensions/`
-2. Enable **Developer mode**
-3. Click **Load unpacked**
-4. Select the `dist/chrome/` folder
-
-### From Release
-
-1. Download the latest release archive
-2. Extract it to a folder
-3. Load the `dist/chrome/` folder in Chrome as described above
+Then load `dist/chrome/` as an unpacked extension in Chrome.
 
 ## Usage
 
